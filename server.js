@@ -17,10 +17,6 @@ app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
 app.use(bodyParser.text({ type: 'text/html' }))
 
 
-// Static files
-// needs to be called before the routes in order to work
-app.use(express.static('app/public'));
-
 //Router
 require('./app/routing/apiRoutes.js')(app); 
 require('./app/routing/htmlRoutes.js')(app);
